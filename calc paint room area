@@ -1,0 +1,18 @@
+"use strict";
+class Room {
+	constructor(L, l, h, deadZoneArray){
+       let wallSurface = 2*h*(L+l); 
+       let arrLength = deadZoneArray.length; 
+       for (let i=0; i < arrLength; i++){
+       	    wallSurface -= deadZoneArray[i]
+       }
+       this.effectiveWallSurface = wallSurface;
+	   this.floorSurface = L*l;
+	}
+
+
+}; 
+
+const myRoom = new Room(6,4,2.7,[1.1, 2]);
+
+myRoom
