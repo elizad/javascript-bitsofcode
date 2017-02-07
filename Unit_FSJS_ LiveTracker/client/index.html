@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <base href="/">
+
+  <title>liveTracker</title>
+
+  <!-- VENDOR CSS -->
+  <link rel="stylesheet" href="vendor/bootstrap/dist/css/bootstrap.min.css">
+
+  <!-- CUSTOM CSS -->
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- VENDOR JS -->
+  <script src="/vendor/jquery/dist/jquery.min.js"></script>
+  <script src="/vendor/bootstrap/dist/js/bootstrap.min.js"></script>
+  <script src="vendor/angular/angular.min.js"></script>
+  <script src="vendor/angular-route/angular-route.min.js"></script>
+
+  <!-- CUSTOM JS -->
+  <script src="js/app.js"></script>
+  <script src="js/controllers/MainCtrl.js"></script>
+  <script src="js/services/dataService.js"></script>
+  <script src="js/route-config.js"></script>
+</head>
+
+<body ng-app="liveTracker">
+
+  <nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+      <div class="row">
+
+        <div class="navbar-header col-xs-2">
+          <a class="navbar-brand" href="/#!">liveTracker</a>
+        </div>
+
+        <div class="col-xs-2 col-xs-offset-8">
+          <ul class="nav navbar-nav">
+            <li>
+              <a href="/auth/logout" target="_self">Logout</a>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </nav>
+
+  <!-- ANGULAR DYNAMIC CONTENT -->
+  <div ng-view></div>
+
+  <footer class="footer navbar-fixed-bottom text-center">
+    <div class="container">
+      <p class="text-muted">&copy; 2017 <a href="http://www.embrycode.com">embry(code)</a></p>
+    </div>
+  </footer>
+</body>
+
+</html>
